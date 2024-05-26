@@ -5,7 +5,8 @@
       <li v-for="job in orderedJobs" :key="job.id">
         <h2>{{ job.title }} in {{ job.location }}</h2>
         <p>
-          {{ job.salary }} <img src="../assets/rupee.svg" alt="rupee icon" />
+          {{ job.salary }}
+          <img src="../assets/images/rupee.svg" alt="rupee icon" />
         </p>
       </li>
     </transition-group>

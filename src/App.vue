@@ -1,10 +1,17 @@
 <template>
-  <img src="./assets/heart.svg" alt="heart icon" />
-  <h1>Hyrule Jobs</h1>
-  <button @click="handleClick('location')">Order by location</button>
-  <button @click="handleClick('title')">Order by title</button>
-  <button @click="handleClick('salary')">Order by salary</button>
-  <JobsList :jobs="jobs" :order="order" />
+  <PageLayout>
+    <img src="./assets/images/heart.svg" alt="heart icon" />
+    <h1>Hyrule Jobs</h1>
+    <button
+      @click="handleClick('location')"
+      :class="{ active: 'location' === order }"
+    >
+      Order by location
+    </button>
+    <button @click="handleClick('title')">Order by title</button>
+    <button @click="handleClick('salary')">Order by salary</button>
+    <JobsList :jobs="jobs" :order="order" />
+  </PageLayout>
 </template>
 
 <script lang="ts">
@@ -12,10 +19,11 @@ import { defineComponent, ref } from "vue";
 import Job from "@/types/Job";
 import OrderTerm from "@/types/OrderTerm";
 import JobsList from "@/components/JobsList.vue";
+import PageLayout from "@/components/PageLayout.vue";
 
 export default defineComponent({
   name: "App",
-  components: { JobsList },
+  components: { JobsList, PageLayout },
   setup() {
     const jobs = ref<Job[]>([
       {
@@ -56,14 +64,10 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-$textColor: #2c3e50;
-
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: $textColor;
-  margin-top: 60px;
 }
 </style>
