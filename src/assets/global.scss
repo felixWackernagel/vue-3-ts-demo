@@ -1,5 +1,27 @@
+@import "media";
+
 $backgroundColor: #FF0000;
+$backgroundColor2: #00FF00;
+
+@font-face {
+  font-family: HyliaSerif;
+  src: url("@/assets/fonts/HyliaSerifBeta-Regular.otf") format("opentype");
+}
 
 body {
   background-color: $backgroundColor;
+
+  @include md {
+    background-color: $backgroundColor2;
+  }
+}
+
+h1 {
+  font-family: HyliaSerif;
+  letter-spacing: 4px;
+}
+
+img {
+  width: 32px;
+  height: 32px;
 }
