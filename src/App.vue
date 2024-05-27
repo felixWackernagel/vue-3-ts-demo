@@ -1,16 +1,80 @@
 <template>
   <PageLayout>
-    <img src="./assets/images/heart.svg" alt="heart icon" />
-    <h1>Hyrule Jobs</h1>
-    <button
-      @click="handleClick('location')"
-      :class="{ active: 'location' === order }"
-    >
-      Order by location
-    </button>
-    <button @click="handleClick('title')">Order by title</button>
-    <button @click="handleClick('salary')">Order by salary</button>
+    <div class="breakout">
+      <img src="./assets/images/heart.svg" alt="heart icon" />
+      <h1>Hyrule Jobs</h1>
+    </div>
+    <div>
+      <button
+        @click="handleClick('location')"
+        :class="{ active: 'location' === order }"
+      >
+        Order by location
+      </button>
+      <button @click="handleClick('title')">Order by title</button>
+      <button @click="handleClick('salary')">Order by salary</button>
+    </div>
     <JobsList :jobs="jobs" :order="order" />
+
+    <p class="breakout">
+      Breakout (left and right)<br />
+      Traditionally, we use a container or wrapper, which we need to close, and
+      then open again, but thanks to grid, and with the recent additions of
+      subgrid to all the evergreen browsers, maybe there's a better way to do
+      things?
+    </p>
+    <p class="breakout-right">
+      Breakout (right)<br />
+      Traditionally, we use a container or wrapper, which we need to close, and
+      then open again, but thanks to grid, and with the recent additions of
+      subgrid to all the evergreen browsers, maybe there's a better way to do
+      things?
+    </p>
+    <p class="breakout-left">
+      Breakout (left)<br />
+      Traditionally, we use a container or wrapper, which we need to close, and
+      then open again, but thanks to grid, and with the recent additions of
+      subgrid to all the evergreen browsers, maybe there's a better way to do
+      things?
+    </p>
+
+    <section class="full-width page-grid">
+      <p>
+        Content<br />
+        Traditionally, we use a container or wrapper, which we need to close,
+        and then open again, but thanks to grid, and with the recent additions
+        of subgrid to all the evergreen browsers, maybe there's a better way to
+        do things?
+      </p>
+      <p class="breakout">
+        Breakout (left and right)<br />
+        Traditionally, we use a container or wrapper, which we need to close,
+        and then open again, but thanks to grid, and with the recent additions
+        of subgrid to all the evergreen browsers, maybe there's a better way to
+        do things?
+      </p>
+    </section>
+
+    <img class="full-width" src="./assets/images/bad_erna_1.jpg" alt="" />
+
+    <p class="full-width">
+      Full-Width<br />
+      Traditionally, we use a container or wrapper, which we need to close, and
+      then open again, but thanks to grid, and with the recent additions of
+      subgrid to all the evergreen browsers, maybe there's a better way to do
+      things?
+    </p>
+
+    <section class="full-width page-grid has-background-image">
+      <img class="full-width" src="./assets/images/bad_erna_2.jpg" alt="" />
+      <p>
+        Content<br />
+        Traditionally, we use a container or wrapper, which we need to close,
+        and then open again, but thanks to grid, and with the recent additions
+        of subgrid to all the evergreen browsers, maybe there's a better way to
+        do things?
+      </p>
+    </section>
   </PageLayout>
 </template>
 
