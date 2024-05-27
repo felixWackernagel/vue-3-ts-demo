@@ -19,7 +19,7 @@
     minmax(var(--padding-inline), 1fr)
     [breakout-start] minmax(0, var(--breakout-size))
     [content-start breakout-right-start]
-    min( 100% - (var(--padding-inline) * 2), var(--content-max-width) )
+    min(100% - (var(--padding-inline) * 2), var(--content-max-width))
     [content-end breakout-left-end]
     minmax(0, var(--breakout-size))
     [breakout-end]
