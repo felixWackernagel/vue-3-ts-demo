@@ -38,11 +38,7 @@ export default defineComponent({
 });
 </script>
 
-<style scoped lang="scss">
-li {
-  list-style-type: none;
-}
-
+<style lang="scss">
 /// use by transition-group
 .list-move {
   transition: all 1s;

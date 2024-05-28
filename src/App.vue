@@ -1,5 +1,5 @@
 <template>
-  <PageLayout>
+  <PageGrid>
     <div class="breakout">
       <h1>Hyrule Jobs</h1>
     </div>
@@ -14,6 +14,36 @@
       <button @click="handleClick('salary')">Order by salary</button>
     </div>
     <JobsList :jobs="jobs" :order="order" />
+
+    <section class="column-grid">
+      <div class="columns-6">
+        <img src="@/assets/images/bad_erna_1.jpg" alt="Bad Erna - 1" />
+      </div>
+      <div class="columns-6">
+        <img src="@/assets/images/bad_erna_2.jpg" alt="Bad Erna - 2" />
+      </div>
+      <div class="columns-4">
+        <img src="@/assets/images/bad_erna_3.jpg" alt="Bad Erna - 3" />
+      </div>
+      <div class="columns-4">
+        <img src="@/assets/images/bad_erna_4.jpg" alt="Bad Erna - 4" />
+      </div>
+      <div class="columns-4 rows-2">
+        <img
+          class="cover"
+          src="@/assets/images/bad_erna_5.jpg"
+          alt="Bad Erna - 5"
+        />
+      </div>
+      <div class="columns-4">
+        <img src="@/assets/images/bad_erna_6.jpg" alt="Bad Erna - 6" />
+      </div>
+      <div class="columns-4">
+        <img src="@/assets/images/bad_erna_8.jpg" alt="Bad Erna - 8" />
+      </div>
+    </section>
+
+    <HorizontalScroller />
 
     <p class="breakout">
       Breakout (left and right)<br />
@@ -65,7 +95,11 @@
     </p>
 
     <section class="full-width page-grid has-background-image">
-      <img class="full-width" src="./assets/images/bad_erna_2.jpg" alt="" />
+      <img
+        class="full-width cover"
+        src="@/assets/images/bad_erna_2.jpg"
+        alt=""
+      />
       <p>
         Content<br />
         Traditionally, we use a container or wrapper, which we need to close,
@@ -74,7 +108,7 @@
         do things?
       </p>
     </section>
-  </PageLayout>
+  </PageGrid>
 </template>
 
 <script lang="ts">
@@ -82,11 +116,12 @@ import { defineComponent, ref } from "vue";
 import Job from "@/types/Job";
 import OrderTerm from "@/types/OrderTerm";
 import JobsList from "@/components/JobsList.vue";
-import PageLayout from "@/components/PageLayout.vue";
+import PageGrid from "@/components/PageGrid.vue";
+import HorizontalScroller from "@/components/HorizontalScroller.vue";
 
 export default defineComponent({
   name: "App",
-  components: { JobsList, PageLayout },
+  components: { HorizontalScroller, JobsList, PageGrid },
   setup() {
     const jobs = ref<Job[]>([
       {
