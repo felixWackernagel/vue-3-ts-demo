@@ -4,10 +4,7 @@
     <transition-group name="list" tag="ul">
       <li v-for="job in orderedJobs" :key="job.id">
         <h2>{{ job.title }} in {{ job.location }}</h2>
-        <p>
-          {{ job.salary }}
-          <img src="../assets/images/rupee.svg" alt="rupee icon" />
-        </p>
+        <p>{{ job.salary }}</p>
       </li>
     </transition-group>
   </div>

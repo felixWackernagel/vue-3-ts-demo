@@ -1,7 +1,6 @@
 <template>
   <PageLayout>
     <div class="breakout">
-      <img src="./assets/images/heart.svg" alt="heart icon" />
       <h1>Hyrule Jobs</h1>
     </div>
     <div>
@@ -126,11 +125,3 @@ export default defineComponent({
   methods: {},
 });
 </script>
-
-<style lang="scss">
-#app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: $textColor;
-}
-</style>

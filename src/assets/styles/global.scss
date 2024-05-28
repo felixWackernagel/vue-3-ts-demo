@@ -1,0 +1,16 @@
+@import url("@/assets/styles/css_reset.css");
+
+@import "variables";
+@import "media";
+@import "fonts";
+
+h1 {
+  font-family: "HyliaSerif";
+  letter-spacing: 4px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

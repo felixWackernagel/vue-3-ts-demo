@@ -25,10 +25,8 @@
     [breakout-end]
     minmax(var(--padding-inline), 1fr)
     [breakout-right-end full-width-end];
-}
 
-@media (min-width: 768px) {
-  .page-grid {
+  @include md {
     --padding-inline: 30px;
   }
 }
