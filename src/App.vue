@@ -43,7 +43,7 @@
       </div>
     </section>
 
-    <HorizontalScroller />
+    <HorizontalScroller class="full-width" />
 
     <p class="breakout">
       Breakout (left and right)<br />
