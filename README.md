@@ -22,3 +22,12 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Run production dist locally
+```
+# install preview server
+npm install -g serve
+
+# run dist
+serve -s dist
+```
