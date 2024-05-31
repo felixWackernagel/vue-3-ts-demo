@@ -1,5 +1,8 @@
 <template>
   <PageGrid>
+    <header>
+      <ThemeSwitch />
+    </header>
     <div class="breakout">
       <h1>Hyrule Jobs</h1>
     </div>
@@ -118,10 +121,11 @@ import OrderTerm from "@/types/OrderTerm";
 import JobsList from "@/components/JobsList.vue";
 import PageGrid from "@/components/PageGrid.vue";
 import HorizontalScroller from "@/components/HorizontalScroller.vue";
+import ThemeSwitch from "@/components/ThemeSwitch.vue";
 
 export default defineComponent({
   name: "App",
-  components: { HorizontalScroller, JobsList, PageGrid },
+  components: { HorizontalScroller, JobsList, PageGrid, ThemeSwitch },
   setup() {
     const jobs = ref<Job[]>([
       {
