@@ -16,6 +16,7 @@
       </span>
       <ThemeSwitch />
     </header>
+    <ComponentSlider class="full-width" />
     <div>
       <button
         @click="handleClick('location')"
@@ -132,10 +133,17 @@ import JobsList from "@/components/JobsList.vue";
 import PageGrid from "@/components/PageGrid.vue";
 import HorizontalScroller from "@/components/HorizontalScroller.vue";
 import ThemeSwitch from "@/components/ThemeSwitch.vue";
+import ComponentSlider from "@/components/ComponentSlider.vue";
 
 export default defineComponent({
   name: "App",
-  components: { HorizontalScroller, JobsList, PageGrid, ThemeSwitch },
+  components: {
+    HorizontalScroller,
+    JobsList,
+    PageGrid,
+    ThemeSwitch,
+    ComponentSlider,
+  },
   setup() {
     const jobs = ref<Job[]>([
       {
