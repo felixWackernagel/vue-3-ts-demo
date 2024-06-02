@@ -1,0 +1,23 @@
+@mixin dark {
+  .theme-dark & {
+    @content;
+  }
+}
+
+:root {
+  --clr-light: #{$colorOnPrimary};
+  --clr-dark: #{$primary900};
+  --clr-primary: #{$primary500};
+
+  --foreground: var(--clr-dark);
+  --background: var(--clr-light);
+}
+
+.theme-dark {
+  --clr-light: #{$primary100};
+  --clr-dark: #{$primary700};
+  --clr-primary: #{$secondary500};
+
+  --foreground: var(--clr-light);
+  --background: var(--clr-dark);
+}

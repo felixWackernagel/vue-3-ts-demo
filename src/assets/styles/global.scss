@@ -4,10 +4,14 @@
 @import "media";
 @import "fonts";
 @import "column-grid";
+@import "theme";
 
-h1 {
-  font-family: "HyliaSerif";
-  letter-spacing: 4px;
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Roboto";
 }
 
 img {
@@ -31,5 +35,33 @@ img {
     position: absolute;
     z-index: -1;
     inset: 0;
+  }
+}
+
+header {
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    --_color: #{$primary400};
+
+    @include dark {
+      --_color: #{$primary200};
+    }
+
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--_color);
+    border-bottom: 1px solid var(--_color);
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2rem;
+
+    svg {
+      margin-left: 0.2rem;
+      fill: var(--_color);
+    }
   }
 }
