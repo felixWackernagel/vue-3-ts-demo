@@ -1,20 +1,62 @@
 <template>
   <div class="scroller" ref="scroller">
     <ul class="scroller_inner">
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>SSG</li>
-      <li>animation</li>
-      <li>UI/UX</li>
-      <li>webdev</li>
-      <li>SCSS</li>
-      <li>TypeScript</li>
-      <li>React</li>
-      <li>Vue</li>
-      <li>Angular</li>
-      <li>Components</li>
-      <li>Functions</li>
+      <li>
+        <img
+          src="@/assets/images/bad_erna_1.jpg"
+          class="cover card"
+          alt="Bad Erna 1"
+        />
+      </li>
+      <li>
+        <img
+          src="@/assets/images/bad_erna_2.jpg"
+          class="cover card"
+          alt="Bad Erna 1"
+        />
+      </li>
+      <li>
+        <img
+          src="@/assets/images/bad_erna_3.jpg"
+          class="cover card"
+          alt="Bad Erna 1"
+        />
+      </li>
+      <li>
+        <img
+          src="@/assets/images/bad_erna_4.jpg"
+          class="cover card"
+          alt="Bad Erna 1"
+        />
+      </li>
+      <li>
+        <img
+          src="@/assets/images/bad_erna_5.jpg"
+          class="cover card"
+          alt="Bad Erna 1"
+        />
+      </li>
+      <li>
+        <img
+          src="@/assets/images/bad_erna_6.jpg"
+          class="cover card"
+          alt="Bad Erna 1"
+        />
+      </li>
+      <li>
+        <img
+          src="@/assets/images/bad_erna_7.jpg"
+          class="cover card"
+          alt="Bad Erna 1"
+        />
+      </li>
+      <li>
+        <img
+          src="@/assets/images/bad_erna_8.jpg"
+          class="cover card"
+          alt="Bad Erna 1"
+        />
+      </li>
     </ul>
   </div>
 </template>
@@ -60,20 +102,10 @@ onMounted(() => {
   }
   &[data-animated="true"] {
     overflow: hidden;
-    -webkit-mask: linear-gradient(
-      90deg,
-      transparent,
-      white 20%,
-      white 80%,
-      transparent
-    );
-    mask: linear-gradient(
-      90deg,
-      transparent,
-      white 20%,
-      white 80%,
-      transparent
-    );
+
+    &:hover .scroller_inner {
+      animation-play-state: paused;
+    }
 
     .scroller_inner {
       width: max-content;
@@ -82,20 +114,24 @@ onMounted(() => {
         var(--_animation-direction, forwards) linear infinite;
     }
   }
+  &:hover li {
+    filter: grayscale(1);
+  }
 
   .scroller_inner {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-bottom: 40px;
     padding-block: 1rem;
 
     li {
-      padding: 1rem;
-      background: $primary400;
-      border-radius: 0.5rem;
-      box-shadow: 0 0.5rem 1rem -0.25rem $primary800;
-      color: $colorOnPrimary;
+      height: var(--_height, 100px);
+      width: var(--_width, 150px);
+      transition: filter 200ms;
+
+      &:hover {
+        filter: grayscale(0);
+      }
     }
   }
 

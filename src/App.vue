@@ -16,9 +16,23 @@
       </span>
       <ThemeSwitch />
     </header>
-    <ComponentSlider class="full-width" />
-    <HorizontalSlider data-direction="left" data-speed="fast" />
-    <HorizontalSlider data-direction="right" data-speed="slow" />
+    <h2>HorizontalSlider</h2>
+    <p>
+      Ein automatischer Slider dessen Geschwindigkeit und Richtung angepasst
+      werden kann. Der Inhalt des Slider kann beliebig verändert werden von
+      einer Tag-Liste bis zur Bildergalerie. Die Komponente stellt sich anders
+      da, wenn die "prefered-motion" als reduced konfiguriert ist.
+    </p>
+    <HorizontalSlider
+      class="full-width"
+      data-direction="left"
+      data-speed="fast"
+    />
+    <HorizontalSlider
+      class="full-width"
+      data-direction="right"
+      data-speed="slow"
+    />
     <div>
       <button
         @click="handleClick('location')"
@@ -135,7 +149,6 @@ import JobsList from "@/components/JobsList.vue";
 import PageGrid from "@/components/PageGrid.vue";
 import HorizontalScroller from "@/components/HorizontalScroller.vue";
 import ThemeSwitch from "@/components/ThemeSwitch.vue";
-import ComponentSlider from "@/components/ComponentSlider.vue";
 import HorizontalSlider from "@/components/HorizontalSlider.vue";
 
 export default defineComponent({
@@ -145,7 +158,6 @@ export default defineComponent({
     JobsList,
     PageGrid,
     ThemeSwitch,
-    ComponentSlider,
     HorizontalSlider,
   },
   setup() {
