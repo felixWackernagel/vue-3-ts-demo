@@ -21,18 +21,14 @@
   </PageGrid>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script lang="ts" setup>
 import PageGrid from "@/components/PageGrid.vue";
 import ThemeSwitch from "@/components/ThemeSwitch.vue";
 import NavBar from "@/components/NavBar.vue";
-
-export default defineComponent({
-  name: "App",
-  components: {
-    PageGrid,
-    ThemeSwitch,
-    NavBar,
-  },
-});
 </script>
+
+<style lang="scss">
+.logo {
+  text-decoration: none;
+}
+</style>
