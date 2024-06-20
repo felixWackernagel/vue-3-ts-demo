@@ -2,7 +2,7 @@
   <PageGrid>
     <header>
       <span class="logo"
-        >Felix Wackernagel
+        >{{ $t("appTitle") }}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="24px"
@@ -16,12 +16,13 @@
       </span>
       <ThemeSwitch />
     </header>
-    <h2>HorizontalSlider</h2>
+    <h2>horizontaler Slider</h2>
     <p>
-      Ein automatischer Slider dessen Geschwindigkeit und Richtung angepasst
-      werden kann. Der Inhalt des Slider kann beliebig verändert werden von
-      einer Tag-Liste bis zur Bildergalerie. Die Komponente stellt sich anders
-      da, wenn die "prefered-motion" als reduced konfiguriert ist.
+      Ein selbstständig laufender Slider dessen Geschwindigkeit und Richtung
+      angepasst werden kann. Der Inhalt des Slider kann beliebig verändert
+      werden von Texten, Bildern oder komplexeren Komponenten. Die Komponente
+      wird zum Grid, wenn im Browser "prefers-reduced-motion: reduce"
+      konfiguriert ist.
     </p>
     <HorizontalSlider
       class="full-width"
@@ -32,7 +33,50 @@
       class="full-width"
       data-direction="right"
       data-speed="slow"
+      style="margin-bottom: 30px"
     />
+
+    <h2>CSS Grid</h2>
+    <p style="margin-bottom: 1em">
+      Ein CSS Grid vergleichbar mit dem Bootstrap Grid. Es gibt insgesamt 12
+      Spalten horizontal und es können bis zu 12 Zeilen vertikal verbunden
+      werden. Es gibt Viewport support für die Größen sm, md, lg, xl.
+    </p>
+    <section class="column-grid" style="margin-bottom: 30px">
+      <div class="columns-12 columns-sm-6">
+        <img src="@/assets/images/bad_erna_1.jpg" alt="Bad Erna - 1" />
+      </div>
+      <div class="columns-12 columns-sm-6">
+        <img src="@/assets/images/bad_erna_2.jpg" alt="Bad Erna - 2" />
+      </div>
+      <div class="columns-12 columns-sm-6 columns-md-4">
+        <img src="@/assets/images/bad_erna_3.jpg" alt="Bad Erna - 3" />
+      </div>
+      <div class="columns-12 columns-sm-6 columns-md-4">
+        <img src="@/assets/images/bad_erna_4.jpg" alt="Bad Erna - 4" />
+      </div>
+      <div class="columns-12 columns-sm-6 rows-sm-2 columns-md-4">
+        <img
+          class="cover"
+          src="@/assets/images/bad_erna_5.jpg"
+          alt="Bad Erna - 5"
+        />
+      </div>
+      <div class="columns-12 columns-sm-6 columns-md-4">
+        <img src="@/assets/images/bad_erna_6.jpg" alt="Bad Erna - 6" />
+      </div>
+      <div class="columns-12 columns-sm-6 columns-md-4">
+        <img src="@/assets/images/bad_erna_8.jpg" alt="Bad Erna - 8" />
+      </div>
+    </section>
+
+    <h2>Circular Reveal Container</h2>
+    <p style="margin-bottom: 1em">
+      Ein Container dessen textueller Inhalt mit einem kreisförmigen Effekt
+      angezeigt und verborgen werden kann.
+    </p>
+    <RevealContainer />
+
     <div>
       <button
         @click="handleClick('location')"
@@ -44,34 +88,6 @@
       <button @click="handleClick('salary')">Order by salary</button>
     </div>
     <JobsList :jobs="jobs" :order="order" />
-
-    <section class="column-grid">
-      <div class="columns-6">
-        <img src="@/assets/images/bad_erna_1.jpg" alt="Bad Erna - 1" />
-      </div>
-      <div class="columns-6">
-        <img src="@/assets/images/bad_erna_2.jpg" alt="Bad Erna - 2" />
-      </div>
-      <div class="columns-4">
-        <img src="@/assets/images/bad_erna_3.jpg" alt="Bad Erna - 3" />
-      </div>
-      <div class="columns-4">
-        <img src="@/assets/images/bad_erna_4.jpg" alt="Bad Erna - 4" />
-      </div>
-      <div class="columns-4 rows-2">
-        <img
-          class="cover"
-          src="@/assets/images/bad_erna_5.jpg"
-          alt="Bad Erna - 5"
-        />
-      </div>
-      <div class="columns-4">
-        <img src="@/assets/images/bad_erna_6.jpg" alt="Bad Erna - 6" />
-      </div>
-      <div class="columns-4">
-        <img src="@/assets/images/bad_erna_8.jpg" alt="Bad Erna - 8" />
-      </div>
-    </section>
 
     <HorizontalScroller class="full-width" />
 
@@ -150,6 +166,7 @@ import PageGrid from "@/components/PageGrid.vue";
 import HorizontalScroller from "@/components/HorizontalScroller.vue";
 import ThemeSwitch from "@/components/ThemeSwitch.vue";
 import HorizontalSlider from "@/components/HorizontalSlider.vue";
+import RevealContainer from "@/components/RevealContainer.vue";
 
 export default defineComponent({
   name: "App",
@@ -159,6 +176,7 @@ export default defineComponent({
     PageGrid,
     ThemeSwitch,
     HorizontalSlider,
+    RevealContainer,
   },
   setup() {
     const jobs = ref<Job[]>([

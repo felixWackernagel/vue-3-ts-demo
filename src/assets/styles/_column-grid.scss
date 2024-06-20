@@ -1,14 +1,14 @@
 $columnCount: 12;
 $columnGap: 30px;
 
-@mixin colsAndRows() {
+@mixin colsAndRows($viewport) {
   $columns: 1 2 3 4 5 6 7 8 9 10 11 12;
   @each $column in $columns {
-    > .columns-#{$column} {
+    > .columns-#{$viewport}#{$column} {
       grid-column: span $column;
     }
 
-    > .rows-#{$column} {
+    > .rows-#{$viewport}#{$column} {
       grid-row: span $column;
     }
   }
@@ -16,8 +16,24 @@ $columnGap: 30px;
 
 .column-grid {
   display: grid;
-  grid-template-columns: repeat( $columnCount, 1fr );
+  grid-template-columns: repeat($columnCount, 1fr);
   gap: $columnGap;
 
-  @include colsAndRows;
+  @include colsAndRows("");
+
+  @include sm {
+    @include colsAndRows("sm-");
+  }
+
+  @include md {
+    @include colsAndRows("md-");
+  }
+
+  @include lg {
+    @include colsAndRows("lg-");
+  }
+
+  @include xl {
+    @include colsAndRows("xl-");
+  }
 }
