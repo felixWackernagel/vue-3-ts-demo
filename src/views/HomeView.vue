@@ -5,6 +5,7 @@ import OrderTerm from "@/types/OrderTerm";
 import JobsList from "@/components/JobsList.vue";
 import HorizontalScroller from "@/components/HorizontalScroller.vue";
 import HorizontalSlider from "@/components/HorizontalSlider.vue";
+import ImageComponent from "@/components/ImageComponent.vue";
 
 export default defineComponent({
   name: "HomeView",
@@ -12,6 +13,7 @@ export default defineComponent({
     HorizontalScroller,
     JobsList,
     HorizontalSlider,
+    ImageComponent,
   },
   setup() {
     const jobs = ref<Job[]>([
@@ -83,33 +85,51 @@ export default defineComponent({
 
   <section class="column-grid">
     <div class="columns-6">
-      <img src="@/assets/images/bad_erna_1.jpg" alt="Bad Erna - 1" />
+      <ImageComponent
+        :source="require('@/assets/images/bad_erna_1.jpg')"
+        alt="Bad Erna - 1"
+      />
     </div>
     <div class="columns-6">
-      <img src="@/assets/images/bad_erna_2.jpg" alt="Bad Erna - 2" />
+      <ImageComponent
+        :source="require('@/assets/images/bad_erna_2.jpg')"
+        alt="Bad Erna - 2"
+      />
     </div>
     <div class="columns-4">
-      <img src="@/assets/images/bad_erna_3.jpg" alt="Bad Erna - 3" />
+      <ImageComponent
+        :source="require('@/assets/images/bad_erna_3.jpg')"
+        alt="Bad Erna - 3"
+      />
     </div>
     <div class="columns-4">
-      <img src="@/assets/images/bad_erna_4.jpg" alt="Bad Erna - 4" />
+      <ImageComponent
+        :source="require('@/assets/images/bad_erna_4.jpg')"
+        alt="Bad Erna - 4"
+      />
     </div>
     <div class="columns-4 rows-2">
-      <img
+      <ImageComponent
         class="cover"
-        src="@/assets/images/bad_erna_5.jpg"
+        :source="require('@/assets/images/bad_erna_5.jpg')"
         alt="Bad Erna - 5"
       />
     </div>
     <div class="columns-4">
-      <img src="@/assets/images/bad_erna_6.jpg" alt="Bad Erna - 6" />
+      <ImageComponent
+        :source="require('@/assets/images/bad_erna_6.jpg')"
+        alt="Bad Erna - 6"
+      />
     </div>
     <div class="columns-4">
-      <img src="@/assets/images/bad_erna_8.jpg" alt="Bad Erna - 8" />
+      <ImageComponent
+        :source="require('@/assets/images/bad_erna_8.jpg')"
+        alt="Bad Erna - 8"
+      />
     </div>
   </section>
 
-  <HorizontalScroller class="full-width" />
+  <HorizontalScroller class="full-width" style="display: none" />
 
   <p class="breakout">
     Breakout (left and right)<br />
@@ -150,7 +170,11 @@ export default defineComponent({
     </p>
   </section>
 
-  <img class="full-width" src="@/assets/images/bad_erna_1.jpg" alt="" />
+  <ImageComponent
+    :source="require('@/assets/images/bad_erna_1.jpg')"
+    class="full-width"
+    alt="Bad Erna - 1"
+  />
 
   <p class="full-width">
     Full-Width<br />
@@ -161,7 +185,11 @@ export default defineComponent({
   </p>
 
   <section class="full-width page-grid has-background-image">
-    <img class="full-width cover" src="@/assets/images/bad_erna_2.jpg" alt="" />
+    <ImageComponent
+      class="full-width cover"
+      :source="require('@/assets/images/bad_erna_2.jpg')"
+      alt="Bad Erna - 2"
+    />
     <p>
       Content<br />
       Traditionally, we use a container or wrapper, which we need to close, and
