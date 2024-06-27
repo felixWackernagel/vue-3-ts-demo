@@ -3,59 +3,59 @@
     <div class="slider" ref="sliderRef">
       <div class="form" ref="formRef">
         <div class="item">
-          <img
+          <ImageComponent
             class="cover card"
-            src="@/assets/images/bad_erna_1.jpg"
-            alt="Bad Erna 1"
+            :source="require('@/assets/images/bad_erna_1.jpg')"
+            alt="Bad Erna - 1"
           />
         </div>
         <div class="item">
-          <img
+          <ImageComponent
             class="cover card"
-            src="@/assets/images/bad_erna_2.jpg"
-            alt="Bad Erna 2"
+            :source="require('@/assets/images/bad_erna_2.jpg')"
+            alt="Bad Erna - 2"
           />
         </div>
         <div class="item">
-          <img
+          <ImageComponent
             class="cover card"
-            src="@/assets/images/bad_erna_3.jpg"
-            alt="Bad Erna 3"
+            :source="require('@/assets/images/bad_erna_3.jpg')"
+            alt="Bad Erna - 3"
           />
         </div>
         <div class="item">
-          <img
+          <ImageComponent
             class="cover card"
-            src="@/assets/images/bad_erna_4.jpg"
-            alt="Bad Erna 4"
+            :source="require('@/assets/images/bad_erna_4.jpg')"
+            alt="Bad Erna - 4"
           />
         </div>
         <div class="item">
-          <img
+          <ImageComponent
             class="cover card"
-            src="@/assets/images/bad_erna_5.jpg"
-            alt="Bad Erna 5"
+            :source="require('@/assets/images/bad_erna_5.jpg')"
+            alt="Bad Erna - 5"
           />
         </div>
         <div class="item">
-          <img
+          <ImageComponent
             class="cover card"
-            src="@/assets/images/bad_erna_6.jpg"
-            alt="Bad Erna 6"
+            :source="require('@/assets/images/bad_erna_6.jpg')"
+            alt="Bad Erna - 6"
           />
         </div>
         <div class="item">
-          <img
+          <ImageComponent
             class="cover card"
-            src="@/assets/images/bad_erna_7.jpg"
-            alt="Bad Erna 7"
+            :source="require('@/assets/images/bad_erna_7.jpg')"
+            alt="Bad Erna - 7"
           />
         </div>
         <div class="item">
-          <img
+          <ImageComponent
             class="cover card"
-            src="@/assets/images/bad_erna_8.jpg"
-            alt="Bad Erna 8"
+            :source="require('@/assets/images/bad_erna_8.jpg')"
+            alt="Bad Erna - 8"
           />
         </div>
       </div>
@@ -65,6 +65,7 @@
 
 <script lang="ts" setup>
 import { ref, onMounted } from "vue";
+import ImageComponent from "@/components/ImageComponent.vue";
 
 const sliderRef = ref<HTMLDivElement | null>(null);
 const formRef = ref<HTMLDivElement | null>(null);

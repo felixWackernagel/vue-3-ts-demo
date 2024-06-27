@@ -2,59 +2,59 @@
   <div class="scroller" ref="scroller">
     <ul class="scroller_inner">
       <li>
-        <img
-          src="@/assets/images/bad_erna_1.jpg"
+        <ImageComponent
           class="cover card"
-          alt="Bad Erna 1"
+          :source="require('@/assets/images/bad_erna_1.jpg')"
+          alt="Bad Erna - 1"
         />
       </li>
       <li>
-        <img
-          src="@/assets/images/bad_erna_2.jpg"
+        <ImageComponent
           class="cover card"
-          alt="Bad Erna 1"
+          :source="require('@/assets/images/bad_erna_2.jpg')"
+          alt="Bad Erna - 2"
         />
       </li>
       <li>
-        <img
-          src="@/assets/images/bad_erna_3.jpg"
+        <ImageComponent
           class="cover card"
-          alt="Bad Erna 1"
+          :source="require('@/assets/images/bad_erna_3.jpg')"
+          alt="Bad Erna - 3"
         />
       </li>
       <li>
-        <img
-          src="@/assets/images/bad_erna_4.jpg"
+        <ImageComponent
           class="cover card"
-          alt="Bad Erna 1"
+          :source="require('@/assets/images/bad_erna_4.jpg')"
+          alt="Bad Erna - 4"
         />
       </li>
       <li>
-        <img
-          src="@/assets/images/bad_erna_5.jpg"
+        <ImageComponent
           class="cover card"
-          alt="Bad Erna 1"
+          :source="require('@/assets/images/bad_erna_5.jpg')"
+          alt="Bad Erna - 5"
         />
       </li>
       <li>
-        <img
-          src="@/assets/images/bad_erna_6.jpg"
+        <ImageComponent
           class="cover card"
-          alt="Bad Erna 1"
+          :source="require('@/assets/images/bad_erna_6.jpg')"
+          alt="Bad Erna - 6"
         />
       </li>
       <li>
-        <img
-          src="@/assets/images/bad_erna_7.jpg"
+        <ImageComponent
           class="cover card"
-          alt="Bad Erna 1"
+          :source="require('@/assets/images/bad_erna_7.jpg')"
+          alt="Bad Erna - 7"
         />
       </li>
       <li>
-        <img
-          src="@/assets/images/bad_erna_8.jpg"
+        <ImageComponent
           class="cover card"
-          alt="Bad Erna 1"
+          :source="require('@/assets/images/bad_erna_8.jpg')"
+          alt="Bad Erna - 8"
         />
       </li>
     </ul>
@@ -63,6 +63,7 @@
 
 <script lang="ts" setup>
 import { ref, onMounted } from "vue";
+import ImageComponent from "@/components/ImageComponent.vue";
 
 const scroller = ref<HTMLDivElement | null>(null);
 
