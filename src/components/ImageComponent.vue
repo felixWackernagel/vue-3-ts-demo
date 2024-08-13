@@ -8,13 +8,18 @@ interface Props {
   source: string;
 }
 
-defineProps<Props>();
+let props = defineProps<Props>();
 
 const el = ref<HTMLImageElement | null>(null);
 
 onMounted(() => {
-  const imageElement: HTMLImageElement | null = el.value;
-  if (!imageElement) {
+  const imageElements = Array.from(
+    document.querySelectorAll<HTMLImageElement>(
+      `.image-component[data-src="${props.source}"]`
+    )
+  );
+
+  if (!imageElements.length) {
     return;
   }
 
@@ -29,6 +34,7 @@ onMounted(() => {
     }
 
     image.src = src;
+    image.removeAttribute("data-src");
   }
 
   function handleIntersect(
@@ -54,11 +60,13 @@ onMounted(() => {
     observer.observe(image);
   }
 
-  if (window["IntersectionObserver"]) {
-    createObserver(imageElement);
-  } else {
-    loadImage(imageElement);
-  }
+  imageElements.forEach((imageElement) => {
+    if (window["IntersectionObserver"]) {
+      createObserver(imageElement);
+    } else {
+      loadImage(imageElement);
+    }
+  });
 });
 </script>
 <style lang="scss">
