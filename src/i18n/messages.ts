@@ -5,12 +5,16 @@ export default {
     navDroidFridge: "DroidFridge",
     navDevelopment: "Spielwiese",
     navAbout: "Impressum",
+    navDroidFridgeHome: "App",
+    navDroidFridgeDataProtection: "Datenschutz",
   },
   en: {
     appTitle: "Felix Wackernagel",
     navHome: "Home",
     navDroidFridge: "DroidFridge",
     navDevelopment: "Playground",
-    navAbout: "Impress",
+    navAbout: "Imprint",
+    navDroidFridgeHome: "App",
+    navDroidFridgeDataProtection: "Data Protection",
   },
 };

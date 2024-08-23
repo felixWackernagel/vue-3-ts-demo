@@ -7,17 +7,27 @@ const routes = [
     component: () => import("../views/HomeView.vue"),
   },
   {
-    path: "/about",
+    path: "/impressum",
     name: "about",
     component: () => import("../views/AboutView.vue"),
   },
   {
     path: "/droidfridge",
-    name: "droidfridge",
-    component: () => import("../views/DroidFridgeView.vue"),
+    children: [
+      {
+        path: "",
+        name: "droidFridgeHome",
+        component: () => import("../views/DroidFridgeHomeView.vue"),
+      },
+      {
+        path: "datenschutz",
+        name: "droidFridgeDataProtection",
+        component: () => import("../views/DroidFridgeDataProtectionView.vue"),
+      },
+    ],
   },
   {
-    path: "/",
+    path: "/spielwiese",
     name: "development",
     component: () => import("../views/DevelopmentView.vue"),
   },
