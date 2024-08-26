@@ -18,7 +18,7 @@
         <RouterLink :to="{ name: 'about' }">{{ $t("navAbout") }}</RouterLink>
       </li>
     </ul>
-    <ul v-show="$route.matched.some(({ name }) => name === 'droidFridge')">
+    <ul v-show="routeName.startsWith('droidFridge')">
       <li>
         <RouterLink :to="{ name: 'droidFridgeHome' }">{{
           $t("navDroidFridgeHome")
@@ -32,13 +32,42 @@
     </ul>
   </nav>
 </template>
+<script setup lang="ts">
+import { useRoute } from "vue-router";
 
+const route = useRoute();
+let routeName = route ? route.name : "";
+if (!routeName) {
+  routeName = "";
+}
+</script>
 <style lang="scss">
-ul {
-}
-.router-link--active {
-}
+nav {
+  margin-bottom: 15px;
 
-.router-link--exact-active {
+  a {
+    padding: 4px 8px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 200ms ease, border-color 200ms ease;
+    color: var(--foreground);
+
+    &:hover,
+    &.router-link--active,
+    &.router-link--exact-active {
+      color: var(--clr-primary);
+      border-color: var(--clr-primary);
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    + ul {
+      margin-top: 16px;
+    }
+  }
 }
 </style>
