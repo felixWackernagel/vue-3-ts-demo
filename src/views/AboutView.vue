@@ -1,6 +1,6 @@
 <template>
   <div class="impressum">
-    <h1>Impressum</h1>
+    <h1>{{ $t("navAbout") }}</h1>
     <p>Angaben gemäß § 5 DDG</p>
     <p>Felix Wackernagel</p>
     <p>

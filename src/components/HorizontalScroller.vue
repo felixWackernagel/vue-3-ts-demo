@@ -5,56 +5,56 @@
         <div class="item">
           <ImageComponent
             class="cover card"
-            :source="require('@/assets/images/bad_erna_1.jpg')"
+            :source="require('@/assets/images/bad_erna_1.webp')"
             alt="Bad Erna - 1"
           />
         </div>
         <div class="item">
           <ImageComponent
             class="cover card"
-            :source="require('@/assets/images/bad_erna_2.jpg')"
+            :source="require('@/assets/images/bad_erna_2.webp')"
             alt="Bad Erna - 2"
           />
         </div>
         <div class="item">
           <ImageComponent
             class="cover card"
-            :source="require('@/assets/images/bad_erna_3.jpg')"
+            :source="require('@/assets/images/bad_erna_3.webp')"
             alt="Bad Erna - 3"
           />
         </div>
         <div class="item">
           <ImageComponent
             class="cover card"
-            :source="require('@/assets/images/bad_erna_4.jpg')"
+            :source="require('@/assets/images/bad_erna_4.webp')"
             alt="Bad Erna - 4"
           />
         </div>
         <div class="item">
           <ImageComponent
             class="cover card"
-            :source="require('@/assets/images/bad_erna_5.jpg')"
+            :source="require('@/assets/images/bad_erna_5.webp')"
             alt="Bad Erna - 5"
           />
         </div>
         <div class="item">
           <ImageComponent
             class="cover card"
-            :source="require('@/assets/images/bad_erna_6.jpg')"
+            :source="require('@/assets/images/bad_erna_6.webp')"
             alt="Bad Erna - 6"
           />
         </div>
         <div class="item">
           <ImageComponent
             class="cover card"
-            :source="require('@/assets/images/bad_erna_7.jpg')"
+            :source="require('@/assets/images/bad_erna_7.webp')"
             alt="Bad Erna - 7"
           />
         </div>
         <div class="item">
           <ImageComponent
             class="cover card"
-            :source="require('@/assets/images/bad_erna_8.jpg')"
+            :source="require('@/assets/images/bad_erna_8.webp')"
             alt="Bad Erna - 8"
           />
         </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="reveal-container" ref="container">
     <img
-      src="@/assets/images/bad_erna_8.jpg"
+      src="@/assets/images/bad_erna_8.webp"
       class="cover card"
       alt="Bad Erna 1"
     />

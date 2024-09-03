@@ -1,3 +1,3 @@
 <template>
-  <h2>App</h2>
+  <h2>{{ $t("navDroidFridgeHome") }}</h2>
 </template>

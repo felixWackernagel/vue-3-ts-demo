@@ -1,3 +1,3 @@
 <template>
-  <h2>Datenschutz</h2>
+  <h2>{{ $t("navDroidFridgeDataProtection") }}</h2>
 </template>

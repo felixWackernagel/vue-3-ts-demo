@@ -54,6 +54,8 @@ export default defineComponent({
 });
 </script>
 <template>
+  <h1>{{ $t("navDevelopment") }}</h1>
+  <p>Hier ist die grüne Wiese auf der ich mich als Entwickler austoben kann.</p>
   <h2>HorizontalSlider</h2>
   <p>
     Ein automatischer Slider dessen Geschwindigkeit und Richtung angepasst
@@ -86,44 +88,44 @@ export default defineComponent({
   <section class="column-grid">
     <div class="columns-6">
       <ImageComponent
-        :source="require('@/assets/images/bad_erna_1.jpg')"
+        :source="require('@/assets/images/bad_erna_1.webp')"
         alt="Bad Erna - 1"
       />
     </div>
     <div class="columns-6">
       <ImageComponent
-        :source="require('@/assets/images/bad_erna_2.jpg')"
+        :source="require('@/assets/images/bad_erna_2.webp')"
         alt="Bad Erna - 2"
       />
     </div>
     <div class="columns-4">
       <ImageComponent
-        :source="require('@/assets/images/bad_erna_3.jpg')"
+        :source="require('@/assets/images/bad_erna_3.webp')"
         alt="Bad Erna - 3"
       />
     </div>
     <div class="columns-4">
       <ImageComponent
-        :source="require('@/assets/images/bad_erna_4.jpg')"
+        :source="require('@/assets/images/bad_erna_4.webp')"
         alt="Bad Erna - 4"
       />
     </div>
     <div class="columns-4 rows-2">
       <ImageComponent
         class="cover"
-        :source="require('@/assets/images/bad_erna_5.jpg')"
+        :source="require('@/assets/images/bad_erna_5.webp')"
         alt="Bad Erna - 5"
       />
     </div>
     <div class="columns-4">
       <ImageComponent
-        :source="require('@/assets/images/bad_erna_6.jpg')"
+        :source="require('@/assets/images/bad_erna_6.webp')"
         alt="Bad Erna - 6"
       />
     </div>
     <div class="columns-4">
       <ImageComponent
-        :source="require('@/assets/images/bad_erna_8.jpg')"
+        :source="require('@/assets/images/bad_erna_8.webp')"
         alt="Bad Erna - 8"
       />
     </div>
@@ -171,7 +173,7 @@ export default defineComponent({
   </section>
 
   <ImageComponent
-    :source="require('@/assets/images/bad_erna_1.jpg')"
+    :source="require('@/assets/images/bad_erna_1.webp')"
     class="full-width"
     alt="Bad Erna - 1"
   />
@@ -187,7 +189,7 @@ export default defineComponent({
   <section class="full-width page-grid has-background-image">
     <ImageComponent
       class="full-width cover"
-      :source="require('@/assets/images/bad_erna_2.jpg')"
+      :source="require('@/assets/images/bad_erna_2.webp')"
       alt="Bad Erna - 2"
     />
     <p>

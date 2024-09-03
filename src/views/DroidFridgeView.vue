@@ -1,4 +1,4 @@
 <template>
-  <h1>DroidFridge</h1>
+  <h1>{{ $t("navDroidFridge") }}</h1>
   <router-view />
 </template>

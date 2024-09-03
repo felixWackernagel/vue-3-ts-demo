@@ -7,6 +7,7 @@ export default {
     navAbout: "Impressum",
     navDroidFridgeHome: "App",
     navDroidFridgeDataProtection: "Datenschutz",
+    pageNotFound: "Seite nicht gefunden",
   },
   en: {
     appTitle: "Felix Wackernagel",
@@ -16,5 +17,6 @@ export default {
     navAbout: "Imprint",
     navDroidFridgeHome: "App",
     navDroidFridgeDataProtection: "Data Protection",
+    pageNotFound: "Page not found",
   },
 };
